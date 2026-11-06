@@ -208,10 +208,7 @@ def build():
         section(4, "Problems and Risks"),
         bullets([
             "<b>Testbed (blocking).</b> No CloudLab nodes were available, so no baseline is measured. The "
-            "scripts are written and checked, but have never run on real nodes and will likely need small fixes. "
-            "If CloudLab is still unavailable by 12 November, we will ask the instructor for an allocation and "
-            "fall back to any machine where we can boot a Linux 6.12+ kernel with sched_ext (a lab machine, or "
-            "a VM for functional tests only, since a VM is too noisy for tail latency).",
+            "scripts are written and checked, but have never run on real nodes and will likely need small fixes.",
             "<b>The SLO is a placeholder.</b> It will be set from the measured p99 of memcached alone, and the "
             "simulation re-run with it.",
             "<b>EEVDF may already protect memcached.</b> In partial mode the fair class runs ahead of sched_ext, "
