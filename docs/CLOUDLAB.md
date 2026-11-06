@@ -31,7 +31,7 @@ one reboot.
 
 1. CloudLab → **Experiments → Create Experiment Profile → Git Repo**, and enter
    `https://github.com/vcTaz/scx_slo`. CloudLab reads `profile.py` from the repo
-   root; the repo must be public, or push the branch first. Alternatively, paste
+   root (the repo is public). Alternatively, paste
    `profile.py` into a new profile's editor.
 2. **Instantiate** it. Defaults are 2 × `xl170` (Utah), Ubuntu 24.04, 100 GB
    at `/mydata`. If no xl170s are free, try `c220g5` (Wisconsin), which has more CPUs.
@@ -48,7 +48,7 @@ ssh -A <you>@<server-hostname>    # hostnames are on the experiment's List View
 On **both** nodes:
 
 ```sh
-git clone -b controller https://github.com/vcTaz/scx_slo ~/scx_slo
+git clone https://github.com/vcTaz/scx_slo ~/scx_slo
 # private repo or unpushed changes: rsync -a ./ <you>@<node>:~/scx_slo/ from your laptop
 ```
 
