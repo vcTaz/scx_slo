@@ -1,2 +1,5 @@
 /target
 /results
+/.venv
+__pycache__/
+/.mplconfig

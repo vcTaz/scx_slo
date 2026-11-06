@@ -80,7 +80,8 @@ impl Histogram {
         self.total
     }
 
-    fn add(&mut self, other: &Histogram) {
+    /// Add another histogram's counts into this one.
+    pub fn add(&mut self, other: &Histogram) {
         for (a, b) in self.counts.iter_mut().zip(&other.counts) {
             *a += b;
         }

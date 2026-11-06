@@ -1,6 +1,6 @@
 [workspace]
 resolver = "2"
-members = ["crates/slo-ctrl"]
+members = ["crates/slo-ctrl", "crates/slo-sim"]
 
 [workspace.package]
 edition = "2021"
