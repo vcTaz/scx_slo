@@ -1,6 +1,7 @@
 [workspace]
 resolver = "2"
 members = ["crates/slo-ctrl", "crates/slo-sim"]
+exclude = ["scheduler"]
 
 [workspace.package]
 edition = "2021"

@@ -6,7 +6,10 @@ SLO-aware CPU scheduling for co-located workloads with sched_ext. See
 
 - `crates/slo-ctrl`: the feedback controller and latency windows (pure Rust, no BPF).
 - `crates/slo-sim`: closed-loop simulation of the controller against a co-location model ([docs/SIMULATION.md](docs/SIMULATION.md)).
-- `analysis/`: plotting scripts (Python venv, see below).
+- `analysis/`: plotting (`plot_sim.py`, Python venv) and run summaries (`parse_runs.py`, standard library).
+- `scheduler/`: the scx_slo sched_ext scheduler (builds on the CloudLab server only).
+- `tools/ext_exec.c`: run a command under SCHED_EXT.
+- `bench/`, `infra/cloudlab/`, `profile.py`: CloudLab testbed and experiments ([docs/CLOUDLAB.md](docs/CLOUDLAB.md)).
 
 ## Test
 

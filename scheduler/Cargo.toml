@@ -1,0 +1,28 @@
+# Separate workspace: building this needs clang, libbpf and a BPF toolchain,
+# which only the CloudLab server has. The root workspace excludes it so
+# `cargo test` works anywhere.
+[workspace]
+
+[package]
+name = "scx_slo"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.91"
+license = "GPL-2.0-only"
+description = "SLO-aware sched_ext scheduler (baseline modes; controller lands in W5)"
+
+[dependencies]
+anyhow = "1"
+clap = { version = "4", features = ["derive"] }
+ctrlc = { version = "3", features = ["termination"] }
+libbpf-rs = "=0.27.2"
+libc = "0.2"
+plain = "0.2"
+procfs = "0.18"
+# Pinned to the same sched-ext/scx release as infra/cloudlab/env.sh (SCX_TAG).
+scx_utils = { git = "https://github.com/sched-ext/scx", tag = "v1.1.4" }
+scx_rustland_core = { git = "https://github.com/sched-ext/scx", tag = "v1.1.4" }
+
+[build-dependencies]
+scx_cargo = { git = "https://github.com/sched-ext/scx", tag = "v1.1.4" }
+scx_rustland_core = { git = "https://github.com/sched-ext/scx", tag = "v1.1.4" }
