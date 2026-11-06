@@ -1,0 +1,7 @@
+[workspace]
+resolver = "2"
+members = ["crates/slo-ctrl"]
+
+[workspace.package]
+edition = "2021"
+license = "GPL-2.0-only"
